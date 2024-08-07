@@ -4,7 +4,7 @@ import { setCookie } from "../utils/cookieAction.utils";
 export const loginUser=async(email,password,myState,navigate)=>{
     try {
          
-        const api = await axios.post(`${baseUrl}`, {
+        const api = await axios.post(`${baseUrl}/user/login`, {
             email,
             password
         }, {
@@ -12,6 +12,7 @@ export const loginUser=async(email,password,myState,navigate)=>{
                 "Content-Type": "application/json"
             },
             
+                withCredentials: true,
             
         });
      
