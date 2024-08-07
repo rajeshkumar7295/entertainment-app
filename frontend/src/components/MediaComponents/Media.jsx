@@ -59,6 +59,7 @@ function Media({ mediaData }) {
             setBookmarkStatus(id)
             setToast(true)
             setToastMessage("Bookmark Deleted Successfully")
+            window.location.reload();
         } catch (error) {
             setToast(true)
             setToastMessage("Error Happened")
