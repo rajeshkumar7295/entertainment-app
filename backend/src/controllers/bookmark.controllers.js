@@ -100,7 +100,7 @@ const deleteBookmark = async (req, res) => {
 // get bookmarks of logged in user 
 const getBookmark = async (req, res) => {
     // req.user , at the time of authentication 
-	const userId=req.user._id;
+	const userId=req.user;
     console.log("userid..",userId);
     try {
         const bookmarks = await Bookmark.find({ user: userId });
