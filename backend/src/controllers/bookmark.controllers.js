@@ -125,7 +125,7 @@ const getBookmark = async (req, res) => {
 // searching of bookmarks 
 const filterBookmark = async (req, res) => {
     // at the time of authentication 
-    const userId = req.user._id;
+    const userId = req.user;
 
     // from params, see the route 
     const title = req.params.searchQuery;
