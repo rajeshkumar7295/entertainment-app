@@ -7,11 +7,17 @@ const { app } = require('./src/app.js')
 dotenv.config();
 
 // mongodb connection 
-mongoose.connect(process.env.MONGODB_URL,
-    { dbName: "EntertainmentWebApp" }
-).then(() => { console.log("Mongodb is connected") }
-).catch((error) => { console.error(error) })
-
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error.message);
+  });
 // server listening
 app.listen(8000, () => {
     console.log("Server running on url: http://localhost:" + 8000);
