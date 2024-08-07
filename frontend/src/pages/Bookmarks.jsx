@@ -23,7 +23,8 @@ function Bookmarks() {
                 try {
                     const { data } = await axios.get(`${baseUrl}/media/bookmark/get`, {
                         headers: {
-                            "Content-Type": "application/json"
+                            "Content-Type": "application/json",
+                            authorization: document.cookie,
                         },
                         withCredentials: true,
 
