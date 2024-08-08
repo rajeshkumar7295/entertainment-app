@@ -1,18 +1,18 @@
 # Entertainment App
 
-The Entertainment App is a full-stack application designed to provide users with access to a vast collection of movies and TV shows, leveraging the TMDB API for fetching media details. It features user authentication, media exploration, and personal bookmarks, offering a comprehensive and personalized media browsing experience.
+The Entertainment App is a full-stack application designed to provide users with access to a vast collection of movies and TV shows, leveraging the TMDB API for fetching media details. It features user authentication, media exploration, and personal bookmarks, offering a comprehensive and personalized media browsing experience.I'm using a VPN to access this website because, in some parts of India, the TMDb API requires a VPN for proper functionality.
 
 ## Deployment
 
-- **Frontend:** :- https://entertainment-app-anurag-affection.vercel.app/
-- **Backend:** :- https://entertainment-web-app-0aqb.onrender.com/
+- **Frontend:** :- https://entertainment-app-seven.vercel.app/
+- **Backend:** :- https://entertainment-app-backend-dgfo.onrender.com
 
 ## Important Links
 
-- API Documentation : https://documenter.getpostman.com/view/30096390/2sA3JGeicf
-- Video Explanation: https://youtu.be/r7oX1R0dADk
-- Database Design: [Google Docs Link](https://docs.google.com/document/d/1hbnF4K5TD7rX6tV_f1QHFxl1lUa7iwCuzthboU_MwQM/edit?usp=sharing)
-- Best Practices : [Google Docs Link](https://docs.google.com/document/d/1KuIXsouPjAgOUs59XOcKuDiKuu74_20GStGO6DTDx6g/edit?usp=sharing)
+- API Documentation : https://documenter.getpostman.com/view/21317055/2sA3rzLYp9
+- Video Explanation: https://drive.google.com/file/d/1DMFSXa3a6qKOty1l6DwJHXfkEvV5ZzI1/view?usp=sharing
+- Database Design: [Google Docs Link](https://docs.google.com/document/d/1gioKXju1L94lS_3_knWIMR6thbH7YUL5JWqKYxm1igY/edit?usp=sharing)
+- Best Practices : [Google Docs Link](https://docs.google.com/document/d/1HgLKrQlIfHjmAn7uQ_mAIK0DFGnPRlZwH8Gfpv15n9E/edit?usp=sharing)
 
 
 ## Features
@@ -56,7 +56,6 @@ The Entertainment App is a full-stack application designed to provide users with
     ```
     MONGODB_URL= "Mongodb connection string our url "
     TOKEN= "Secret token for authentication & cookies"
-    NODE_ENV="Current environment - Development or Production"
     TMDB_KEY="TMDB api key "
     FRONTEND_URL="Frontend url"
     ```
@@ -178,11 +177,14 @@ The Entertainment App is a full-stack application designed to provide users with
     |-- components
         |-- AuthComponents 
             |-- Login.jsx 
-            |-- Logout.jsx 
             |-- Register.jsx 
         |-- CssComponents
             |-- Loading.jsx
+            |-- NavbarMenu.jsx
             |-- Toast.jsx
+        |-- FallbackComponents
+            |-- fallbackData.jsx
+            |-- FallbackMedia.jsx
         |-- HomeMedia
             |-- MediaRecommend.jsx
             |-- MediaTrending.jsx
@@ -215,10 +217,12 @@ The Entertainment App is a full-stack application designed to provide users with
         |-- Bookmarks.jsx 
         |-- Home.jsx 
         |-- Movie.jsx 
-        |-- Profile.jsx 
         |-- Tv.jsx  
+    |-- service
+        |-- user.service.jsx   
     |-- utils 
         |-- baseUrl.js 
+        |-- cookieAction.utils.js
         |-- fetchMultiMedia.js
     |-- App.jsx 
     |-- main.jsx 
